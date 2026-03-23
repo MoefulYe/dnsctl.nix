@@ -68,7 +68,7 @@
     ))
     // {
       overlays.default = final: prev: {
-        dnsctl = self.packages.${final.system}."dnsctl.nix";
+        dnsctl = self.packages.${final.stdenv.hostPlatform.system}."dnsctl.nix";
       };
     };
 }
